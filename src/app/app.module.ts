@@ -1,8 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { MaterialModule} from '@angular/material';
+import {
+  MdCardModule, MdInputModule, MdButtonModule,
+  MdCheckboxModule
+} from '@angular/material';
 
 import { AppCmp } from './app.component';
 import { TalksCmp } from './talks/talks.component';
@@ -26,9 +30,13 @@ import { FiltersCmp } from './filters/filters.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpModule,
-    MaterialModule.forRoot()
+    MdCardModule,
+    MdInputModule,
+    MdButtonModule,
+    MdCheckboxModule
   ],
   providers: [
     App,
